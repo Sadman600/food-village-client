@@ -1,0 +1,11 @@
+.food {
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 190px;
+    position: relative;
+}
+.food img {
+    width: 100%;
+    height: auto;
+}
