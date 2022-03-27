@@ -16,14 +16,14 @@ function Question1() {
             <div className='provssta'>
                 <div>
                     <h4>props</h4>
-                    <ul class="b">
+                    <ul className="b">
                         <li>Props are read only.</li>
                         <li>Props can't be modified.</li>
                     </ul>
                 </div>
                 <div>
                     <h4>State</h4>
-                    <ul class="b">
+                    <ul className="b">
                         <li>State Changes can be asynchronous.</li>
                         <li>State can be modified using this state.</li>
                     </ul>
@@ -39,7 +39,7 @@ function Question2() {
             <div className='provssta'>
                 <div>
 
-                    <ul class="b">
+                    <ul className="b">
                         <li>state asynchronous ভাবে update হয়।</li>
                         <li>যখন স্টেট অবজেক্ট পরিবর্তিত হয়, কম্পোনেন্ট রি-রেন্ডার হয়।</li>
                         <li>স্টেট  কম্পোনেন্টের অন্তর্গত Property এর  মান সঞ্চয় করে।</li>

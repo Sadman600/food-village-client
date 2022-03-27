@@ -31,6 +31,7 @@ const Main = () => {
         const randFood = cart[Math.floor(Math.random() * cart.length)];
         setRand(randFood);
     }
+
     return (
         <div className='foods-container-row'>
             <div className='left-side-column'>
@@ -48,7 +49,7 @@ const Main = () => {
             <div className='right-side-column'>
                 <h1>Selected Food</h1>
                 {
-                    cart.map(food => <Cart key={food.id} food={food}></Cart>)
+                    cart.map(food => <Cart key={food.id} food={food} ></Cart>)
                 }
                 <Random random={rand}></Random>
                 <button className="choose-button button1" onClick={choose1ForMe}>Choose one for me!</button>

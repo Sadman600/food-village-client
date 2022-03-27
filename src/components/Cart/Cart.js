@@ -4,7 +4,7 @@ import React from 'react';
 import './Cart.css';
 const Cart = props => {
     const { image, name } = props.food;
-    console.log(props.food);
+
     return (
         <div className='cart'>
             <img src={image} alt={name} style={{ width: '70px ' }}></img>
