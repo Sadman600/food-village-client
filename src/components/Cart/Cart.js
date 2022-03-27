@@ -1,9 +1,12 @@
 import React from 'react';
 import './Cart.css';
-const Cart = () => {
+const Cart = props => {
+    console.log(props.food);
     return (
         <div>
-            hello
+
+
+            <h1>{props.food.name}</h1>
         </div>
     );
 };
