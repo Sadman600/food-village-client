@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import Cart from '../Cart/Cart';
 import Food from '../Food/Food';
+import Random from '../Random/Random';
 import './Main.css';
 
 const Main = () => {
     const [foods, setFoods] = useState([]);
     const [cart, setCart] = useState([]);
+    const [rand, setRand] = useState([]);
     useEffect(() => {
         fetch('foods.json')
             .then(res => res.json())
@@ -17,15 +19,24 @@ const Main = () => {
         setCart(newFood);
     }
 
-    const choseAgain = () => {
+    const chooseAgain = () => {
         setCart([]);
+    }
+    const choose1ForMe = () => {
+        const randFood = cart[Math.floor(Math.random() * cart.length)];
+        setRand(randFood);
     }
     return (
         <div className='foods-container-row'>
             <div className='left-side-column'>
                 <div className='foods'>
                     {
-                        foods.map(food => <Food key={food.id} food={food} addToCart={addToCart}></Food>)
+                        foods.map(food => <Food
+                            key={food.id}
+                            food={food}
+                            addToCart={addToCart}
+                            choose1ForMe
+                        ></Food>)
                     }
                 </div>
             </div>
@@ -34,8 +45,9 @@ const Main = () => {
                 {
                     cart.map(food => <Cart key={food.id} food={food}></Cart>)
                 }
-                <button class="choose-button button1">Choose one for me!</button>
-                <button class="choose-button button2" onClick={choseAgain}>Choose Again</button>
+                <Random random={rand}></Random>
+                <button className="choose-button button1" onClick={choose1ForMe}>Choose one for me!</button>
+                <button className="choose-button button2" onClick={chooseAgain}>Choose Again</button>
             </div>
         </div>
     );

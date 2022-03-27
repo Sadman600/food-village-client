@@ -2,7 +2,7 @@ img {
     border-radius: 50%;
   }
 
-  .cart {
+  .random {
       display: flex;
       align-items: center;
       justify-content: space-evenly;
