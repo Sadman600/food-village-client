@@ -1,0 +1,25 @@
+/* Column container */
+.foods-container-row {  
+    display: flex;
+    /* flex-wrap: wrap; */
+  }
+
+  /* Sidebar/left column */
+.left-side-column {
+    flex: 70%;
+    background-color: white;
+    padding: 20px;
+  }
+
+/* Main column */
+.right-side-column {
+    flex: 30%;
+    background-color: #f1f1f1;
+    padding: 20px;
+  }
+
+  .foods {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+}
