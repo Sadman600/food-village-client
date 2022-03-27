@@ -16,7 +16,12 @@ const Main = () => {
 
     const addToCart = food => {
         const newFood = [...cart, food];
-        setCart(newFood);
+        if (newFood.length === 5) {
+            alert(`Opps! Can't select more then 4`);
+        } else {
+            setCart(newFood);
+        }
+
     }
 
     const chooseAgain = () => {

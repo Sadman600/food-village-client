@@ -1,0 +1,17 @@
+ul.b {
+    list-style-type: square;
+}
+
+.provssta {
+    display: flex;
+    /* flex-wrap: wrap; */
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (max-width: 700px) {
+  .provssta {   
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+  }
+}
